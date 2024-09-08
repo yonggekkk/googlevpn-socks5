@@ -1,7 +1,7 @@
 #!/bin/bash
 export LANG=en_US.UTF-8
 gvinstall(){
-pkg install -y wget screen
+pkg install -y screen
 if [ ! -e gost ]; then
 wget https://github.com/go-gost/gost/releases/download/v3.0.0-nightly.20240904/gost_3.0.0-nightly.20240904_linux_arm64.tar.gz
 tar zxvf gost_3.0.0-nightly.20240904_linux_arm64.tar.gz
