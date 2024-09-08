@@ -11,7 +11,7 @@ read -p "设置 Socks5 端口（回车跳过为10000-65535之间的随机端口�
 if [[ -z $port ]]; then
 port=$(shuf -i 10000-65535 -n 1)
 fi
-echo "你设置的端口：$(port)" && sleep 3
+echo "你设置的端口：$port" && sleep 3
 echo 'services:' >> config.yaml
 echo '  - name: service-0' >> config.yaml
 echo "    addr: \":$port\"" >> config.yaml
