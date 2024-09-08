@@ -70,7 +70,7 @@ echo " 2. 删除卸载"
 echo " 0. 退出"
 echo "----------------------------------------------------------------------------------"
 [ -e config.yaml ] && echo "已安装，当前使用的端口：$(cat config.yaml 2>/dev/null | sed -n 3p | awk -F":" '{print $NF}' | tr -d '"')" || echo "未安装"
-readp "请输入数字:" Input
+read -p "请输入数字:" Input
 case "$Input" in     
  1 ) gvinstall;;
  2 ) uninstall;;
