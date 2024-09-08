@@ -61,7 +61,7 @@ echo " 1. 重置安装"
 echo " 2. 删除卸载"
 echo " 0. 退出"
 echo "------------------------------------------------"
-[ -e config.yaml ] && echo "已安装，当前可使用的Socks5端口：$(cat config.yaml 2>/dev/null | sed -n 3p | awk -F":" '{print $NF}' | tr -d '"')" || echo "未安装"
+[[ -e config.yaml ]] && echo "已安装，当前正使用的Socks5端口：$(cat config.yaml 2>/dev/null | sed -n 3p | awk -F":" '{print $NF}' | tr -d '"')" || echo "未安装"
 read -p "请输入数字:" Input
 case "$Input" in     
  1 ) gvinstall;;
