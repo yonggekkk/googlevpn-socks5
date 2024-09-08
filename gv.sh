@@ -1,5 +1,4 @@
 #!/bin/bash
-export LANG=en_US.UTF-8
 gvinstall(){
 pkg install -y screen
 if [ ! -e gost ]; then
