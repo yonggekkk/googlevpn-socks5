@@ -69,3 +69,4 @@ case "$Input" in
  * ) exit 
 esac
 }
+show_menu
