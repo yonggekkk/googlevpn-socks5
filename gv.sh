@@ -39,6 +39,7 @@ echo 'screen -wipe' >> gost.sh
 echo "screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs kill" >> gost.sh
 echo "screen -dmS myscreen bash -c './gost -C config.yaml'" >> gost.sh
 chmod +x gost.sh
+echo "安装完毕，请先退出Pixel手机的Termux后台，重新进入后确保有myscreen字样" && sleep 3
 exit
 }
 
@@ -61,7 +62,8 @@ echo " 1. 重置安装"
 echo " 2. 删除卸载"
 echo " 0. 退出"
 echo "------------------------------------------------"
-[[ -e config.yaml ]] && echo "已安装，当前正使用的Socks5端口：$(cat config.yaml 2>/dev/null | sed -n 3p | awk -F":" '{print $NF}' | tr -d '"')" || echo "未安装"
+[[ -e config.yaml ]] && echo "Google VPN共享Socks5节点脚本已安装，Socks5端口：$(cat config.yaml 2>/dev/null | sed -n 3p | awk -F":" '{print $NF}' | tr -d '"')" || echo "Google VPN共享Socks5节点脚本未安装"
+echo "------------------------------------------------"
 read -p "请输入数字:" Input
 case "$Input" in     
  1 ) gvinstall;;
