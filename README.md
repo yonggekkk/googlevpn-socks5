@@ -6,3 +6,5 @@ pkg upgrade -y && pkg install wget -y && bash <(wget -qO- https://raw.githubuser
 ```
 
 [gost](https://github.com/go-gost/gost/releases)
+
+[Termux](https://github.com/termux/termux-app/releases)
