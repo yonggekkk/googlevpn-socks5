@@ -2,7 +2,7 @@
 gvinstall(){
 pkg install -y screen
 if [ ! -e gost ]; then
-wget https://github.com/go-gost/gost/releases/download/v3.0.0-nightly.20240904/gost_3.0.0-nightly.20240904_linux_arm64.tar.gz
+curl -L -o gost_3.0.0-nightly.20240904_linux_arm64.tar.gz -# --retry 2 --insecure https://ghp.ci/https://raw.githubusercontent.com/yonggekkk/googlevpn-socks5/main/gost_3.0.0-nightly.20240904_linux_arm64.tar.gz
 tar zxvf gost_3.0.0-nightly.20240904_linux_arm64.tar.gz
 fi
 rm -f gost_3.0.0-nightly.20240904_linux_arm64.tar.gz README* LICENSE* config.yaml
