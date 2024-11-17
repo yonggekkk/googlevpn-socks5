@@ -2,6 +2,7 @@
 gvinstall(){
 pkg install -y screen
 if [ ! -e gost ]; then
+echo "下载中……"
 curl -L -o gost_3.0.0-nightly.20240904_linux_arm64.tar.gz -# --retry 2 --insecure https://raw.githubusercontent.com/yonggekkk/googlevpn-socks5/main/gost_3.0.0-nightly.20240904_linux_arm64.tar.gz
 tar zxvf gost_3.0.0-nightly.20240904_linux_arm64.tar.gz
 fi
