@@ -2,7 +2,7 @@
 
 
 ```
-pkg upgrade -y && pkg install wget -y && bash <(wget -qO- https://ghp.ci/https://raw.githubusercontent.com/yonggekkk/googlevpn-socks5/main/gv.sh)
+pkg upgrade -y && pkg install wget -y && bash <(wget -qO- https://gh-proxy.com/https://raw.githubusercontent.com/yonggekkk/googlevpn-socks5/main/gv.sh)
 ```
 
 [gost](https://github.com/go-gost/gost/releases)
