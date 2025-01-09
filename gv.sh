@@ -3,18 +3,18 @@ gvinstall(){
 pkg install -y screen
 if [ ! -e gost ]; then
 echo "下载中……"
-curl -L -o gost_3.0.0-nightly.20240904_linux_arm64.tar.gz -# --retry 2 --insecure https://raw.githubusercontent.com/yonggekkk/googlevpn-socks5/main/gost_3.0.0-nightly.20240904_linux_arm64.tar.gz
-tar zxvf gost_3.0.0-nightly.20240904_linux_arm64.tar.gz
+curl -L -o gost_3.0.0_linux_arm64.tar.gz -# --retry 2 --insecure https://raw.githubusercontent.com/yonggekkk/googlevpn-socks5/main/gost_3.0.0_linux_arm64.tar.gz
+tar zxvf gost_3.0.0_linux_arm64.tar.gz
 fi
 if [ ! -e gost ]; then
 echo "当前网络无法链接github，切换中转下载"
-curl -L -o gost_3.0.0-nightly.20240904_linux_arm64.tar.gz -# --retry 2 --insecure https://ghp.ci/https://raw.githubusercontent.com/yonggekkk/googlevpn-socks5/main/gost_3.0.0-nightly.20240904_linux_arm64.tar.gz
-tar zxvf gost_3.0.0-nightly.20240904_linux_arm64.tar.gz
+curl -L -o gost_3.0.0_linux_arm64.tar.gz -# --retry 2 --insecure https://ghp.ci/https://raw.githubusercontent.com/yonggekkk/googlevpn-socks5/main/gost_3.0.0_linux_arm64.tar.gz
+tar zxvf gost_3.0.0_linux_arm64.tar.gz
 fi
 if [ ! -e gost ]; then
 echo "下载失败，请在代理环境下运行脚本" && exit
 fi
-rm -f gost_3.0.0-nightly.20240904_linux_arm64.tar.gz README* LICENSE* config.yaml
+rm -f gost_3.0.0_linux_arm64.tar.gz README* LICENSE* config.yaml
 read -p "设置 Socks5 端口（回车跳过为10000-65535之间的随机端口）：" port
 if [ -z "$port" ]; then
 port=$(shuf -i 10000-65535 -n 1)
