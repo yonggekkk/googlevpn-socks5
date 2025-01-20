@@ -19,7 +19,7 @@ read -p "设置 Socks5 端口（回车跳过为10000-65535之间的随机端口�
 if [ -z "$port" ]; then
 port=$(shuf -i 10000-65535 -n 1)
 fi
-echo "你设置的端口：$port" && sleep 3
+echo "你设置的端口：$port" && sleep 2
 echo 'services:' >> config.yaml
 echo '  - name: service-0' >> config.yaml
 echo "    addr: \":$port\"" >> config.yaml
@@ -48,7 +48,7 @@ echo 'screen -wipe' >> gost.sh
 echo "screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs kill" >> gost.sh
 echo "screen -dmS myscreen bash -c './gost -C config.yaml'" >> gost.sh
 chmod +x gost.sh
-echo "安装完毕，请先退出Pixel手机的Termux后台，重新进入后确保有myscreen字样" && sleep 3
+echo "安装完毕" && sleep 3
 exit
 }
 
@@ -65,13 +65,13 @@ echo "甬哥Github项目  ：github.com/yonggekkk"
 echo "甬哥Blogger博客 ：ygkkk.blogspot.com"
 echo "甬哥YouTube频道 ：www.youtube.com/@ygkkk"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 
-echo "Pixel手机专用Google-VPN共享Socks5节点脚本"
+echo "Pixel手机专用局域网共享Google_VPN_Socks5节点脚本"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 
 echo " 1. 重置安装"
 echo " 2. 删除卸载"
 echo " 0. 退出"
 echo "------------------------------------------------"
-[[ -e config.yaml ]] && echo "GoogleVPN共享Socks5节点脚本已安装，Socks5端口：$(cat config.yaml 2>/dev/null | sed -n 3p | awk -F":" '{print $NF}' | tr -d '"')" || echo "GoogleVPN共享Socks5节点脚本未安装"
+[[ -e config.yaml ]] && echo "已安装，Socks5端口：$(cat config.yaml 2>/dev/null | sed -n 3p | awk -F":" '{print $NF}' | tr -d '"')" || echo "未安装，请选择 1 进行安装"
 echo "------------------------------------------------"
 read -p "请输入数字:" Input
 case "$Input" in     
