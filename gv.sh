@@ -59,6 +59,7 @@ echo "卸载完毕"
 }
 
 show_menu(){
+curl -sSL https://raw.githubusercontent.com/yonggekkk/googlevpn-socks5/main/gv.sh -o gv.sh && chmod +x gv.sh
 clear
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 
 echo "甬哥Github项目  ：github.com/yonggekkk"
@@ -66,6 +67,7 @@ echo "甬哥Blogger博客 ：ygkkk.blogspot.com"
 echo "甬哥YouTube频道 ：www.youtube.com/@ygkkk"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 
 echo "Pixel手机专用局域网共享Google_VPN_Socks5节点脚本"
+echo "当前脚本版本：V25.1.20  快捷方式：bash gv.sh"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 
 echo " 1. 重置安装"
 echo " 2. 删除卸载"
