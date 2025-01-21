@@ -1,6 +1,6 @@
 ### 局域网共享Google-VPN：Socks5+HTTP双代理一键共享脚本
 
-### 注意：Google-Pixel-7a 以上手机专用
+### 注意：Google-Pixel-7之后手机专用
 
 使用视频教程更新中。。。
 
@@ -8,7 +8,7 @@
 
 一键脚本
 ```
-pkg upgrade -y && bash <(wget -qO- https://gh-proxy.com/https://raw.githubusercontent.com/yonggekkk/pixel_vpn_proxy/main/gv.sh)
+pkg upgrade -y && bash <(wget -qO- https://gh-proxy.com/https://raw.githubusercontent.com/yonggekkk/google_vpn_proxy/main/gv.sh)
 ```
 
 -----------------------------------------------------
