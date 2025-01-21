@@ -65,13 +65,11 @@ chmod +x gost.sh
 echo "安装完毕" && sleep 3
 exit
 }
-
 uninstall(){
 screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs kill
 rm -f gost config.yaml
 echo "卸载完毕"
 }
-
 show_menu(){
 curl -sSL https://raw.githubusercontent.com/yonggekkk/googlevpn-socks5/main/gv.sh -o gv.sh && chmod +x gv.sh
 clear
@@ -80,14 +78,20 @@ echo "甬哥Github项目  ：github.com/yonggekkk"
 echo "甬哥Blogger博客 ：ygkkk.blogspot.com"
 echo "甬哥YouTube频道 ：www.youtube.com/@ygkkk"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 
-echo "Pixel手机专用局域网共享Google_VPN_Socks5与HTTP节点脚本"
+echo "注意：Google-Pixel-7a 以上手机专用"
+echo "局域网共享Google_VPN：Socks5与HTTP节点脚本"
 echo "当前脚本版本：V25.1.20  快捷方式：bash gv.sh"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 
 echo " 1. 重置安装"
 echo " 2. 删除卸载"
 echo " 0. 退出"
 echo "------------------------------------------------"
-[[ -e config.yaml ]] && echo "已安装，Socks5端口：$(cat config.yaml 2>/dev/null | grep 'service-socks5' -A 2 | grep 'addr' | awk -F':' '{print $3}' | tr -d '\"')" && echo "已安装，HTTP端口：$(cat config.yaml 2>/dev/null | grep 'service-http' -A 2 | grep 'addr' | awk -F':' '{print $3}' | tr -d '\"')" || echo "未安装，请选择 1 进行安装"
+if [[ -e config.yaml ]]; then
+echo "当前使用的Socks5端口：$(cat config.yaml 2>/dev/null | grep 'service-socks5' -A 2 | grep 'addr' | awk -F':' '{print $3}' | tr -d '\"')" 
+echo "当前使用的HTTP端口：$(cat config.yaml 2>/dev/null | grep 'service-http' -A 2 | grep 'addr' | awk -F':' '{print $3}' | tr -d '\"')"
+else
+echo "未安装，请选择 1 进行安装"
+fi
 echo "------------------------------------------------"
 read -p "请输入数字:" Input
 case "$Input" in     
