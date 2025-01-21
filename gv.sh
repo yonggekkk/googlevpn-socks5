@@ -15,6 +15,7 @@ if [ ! -e gost ]; then
 echo "下载失败，请在代理环境下运行脚本" && exit
 fi
 rm -f gost_3.0.0_linux_arm64.tar.gz README* LICENSE* config.yaml
+read -p "设置协议：" protocol
 read -p "设置 Socks5 端口（回车跳过为10000-65535之间的随机端口）：" port
 if [ -z "$port" ]; then
 port=$(shuf -i 10000-65535 -n 1)
@@ -25,7 +26,7 @@ echo '  - name: service-0' >> config.yaml
 echo "    addr: \":$port\"" >> config.yaml
 echo '    resolver: resolver-0' >> config.yaml
 echo '    handler:' >> config.yaml
-echo '      type: socks5' >> config.yaml
+echo "      type: $protocol" >> config.yaml
 echo '      metadata:' >> config.yaml
 echo '        udp: true' >> config.yaml
 echo '        udpbuffersize: 4096' >> config.yaml
