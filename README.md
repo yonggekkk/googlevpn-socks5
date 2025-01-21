@@ -1,6 +1,6 @@
 ### 局域网共享Google-VPN：Socks5+HTTP双代理一键共享脚本
 
-### 注意：Google-Pixel-7之后手机专用
+### 注意：Google-Pixel-7及之后的Pixel手机专用
 
 使用视频教程更新中。。。
 
