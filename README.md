@@ -6,7 +6,7 @@
 
 一键脚本
 ```
-pkg upgrade -y && bash <(wget -qO- https://gh-proxy.com/https://raw.githubusercontent.com/yonggekkk/proxy/main/gv.sh)
+pkg upgrade -y && bash <(curl -Ls https://gh-proxy.com/https://raw.githubusercontent.com/yonggekkk/proxy/main/gv.sh)
 ```
 
 -----------------------------------------------------
