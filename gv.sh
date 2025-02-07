@@ -7,7 +7,7 @@ curl -L -o gost_3.0.0_linux_arm64.tar.gz -# --retry 2 --insecure https://raw.git
 tar zxvf gost_3.0.0_linux_arm64.tar.gz
 fi
 if [ ! -e gost ]; then
-echo "当前网络无法链接github，切换中转下载"
+echo "当前网络无法链接Github，切换中转下载"
 curl -L -o gost_3.0.0_linux_arm64.tar.gz -# --retry 2 --insecure https://gh-proxy.com/https://raw.githubusercontent.com/yonggekkk/proxy/main/gost_3.0.0_linux_arm64.tar.gz
 tar zxvf gost_3.0.0_linux_arm64.tar.gz
 fi
@@ -19,11 +19,11 @@ read -p "设置 Socks5 端口（回车跳过为10000-65535之间的随机端口�
 if [ -z "$socks_port" ]; then
 socks_port=$(shuf -i 10000-65535 -n 1)
 fi
-read -p "设置 HTTP 端口（回车跳过为10000-65535之间的随机端口）：" http_port
+read -p "设置 Http 端口（回车跳过为10000-65535之间的随机端口）：" http_port
 if [ -z "$http_port" ]; then
 http_port=$(shuf -i 10000-65535 -n 1)
 fi
-echo "你设置的 Socks5 端口：$socks_port 和 HTTP 端口：$http_port" && sleep 2
+echo "你设置的 Socks5 端口：$socks_port 和 Http 端口：$http_port" && sleep 2
 echo 'services:' >> config.yaml
 echo '  - name: service-socks5' >> config.yaml
 echo "    addr: \":$socks_port\"" >> config.yaml
@@ -78,7 +78,7 @@ echo "甬哥Github项目  ：github.com/yonggekkk"
 echo "甬哥Blogger博客 ：ygkkk.blogspot.com"
 echo "甬哥YouTube频道 ：www.youtube.com/@ygkkk"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 
-echo "局域网共享代理：Socks5+HTTP双代理一键脚本"
+echo "局域网共享代理：Socks5+Http双代理一键脚本"
 echo "当前脚本版本：V25.1.21  快捷方式：bash gv.sh"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 
 echo " 1. 重置安装"
@@ -87,7 +87,7 @@ echo " 0. 退出"
 echo "------------------------------------------------"
 if [[ -e config.yaml ]]; then
 echo "当前使用的Socks5端口：$(cat config.yaml 2>/dev/null | grep 'service-socks5' -A 2 | grep 'addr' | awk -F':' '{print $3}' | tr -d '\"')" 
-echo "当前使用的HTTP端口：$(cat config.yaml 2>/dev/null | grep 'service-http' -A 2 | grep 'addr' | awk -F':' '{print $3}' | tr -d '\"')"
+echo "当前使用的Http端口：$(cat config.yaml 2>/dev/null | grep 'service-http' -A 2 | grep 'addr' | awk -F':' '{print $3}' | tr -d '\"')"
 else
 echo "未安装，请选择 1 进行安装"
 fi
