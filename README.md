@@ -1,6 +1,6 @@
 ### 局域网共享代理：Socks5+HTTP双代理一键脚本
 
-### Google vpn用户推荐使用，pixel手机先安装[Termux](https://github.com/termux/termux-app/releases)
+### Google vpn用户推荐使用，Pixel手机先安装[Termux](https://github.com/termux/termux-app/releases)运行一键脚本
 
 一键脚本
 ```
