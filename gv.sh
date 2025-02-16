@@ -3,12 +3,12 @@ gvinstall(){
 pkg install -y screen
 if [ ! -e gost ]; then
 echo "下载中……"
-curl -L -o gost_3.0.0_linux_arm64.tar.gz -# --retry 2 --insecure https://raw.githubusercontent.com/yonggekkk/proxy/main/gost_3.0.0_linux_arm64.tar.gz
+curl -L -o gost_3.0.0_linux_arm64.tar.gz -# --retry 2 --insecure https://raw.githubusercontent.com/yonggekkk/google_vpn_proxy/main/gost_3.0.0_linux_arm64.tar.gz
 tar zxvf gost_3.0.0_linux_arm64.tar.gz
 fi
 if [ ! -e gost ]; then
 echo "当前网络无法链接Github，切换中转下载"
-curl -L -o gost_3.0.0_linux_arm64.tar.gz -# --retry 2 --insecure https://gh-proxy.com/https://raw.githubusercontent.com/yonggekkk/proxy/main/gost_3.0.0_linux_arm64.tar.gz
+curl -L -o gost_3.0.0_linux_arm64.tar.gz -# --retry 2 --insecure https://gh-proxy.com/https://raw.githubusercontent.com/yonggekkk/google_vpn_proxy/main/gost_3.0.0_linux_arm64.tar.gz
 tar zxvf gost_3.0.0_linux_arm64.tar.gz
 fi
 if [ ! -e gost ]; then
@@ -71,15 +71,15 @@ rm -f gost config.yaml
 echo "卸载完毕"
 }
 show_menu(){
-curl -sSL https://raw.githubusercontent.com/yonggekkk/proxy/main/gv.sh -o gv.sh && chmod +x gv.sh
+curl -sSL https://raw.githubusercontent.com/yonggekkk/google_vpn_proxy/main/gv.sh -o gv.sh && chmod +x gv.sh
 clear
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 
 echo "甬哥Github项目  ：github.com/yonggekkk"
 echo "甬哥Blogger博客 ：ygkkk.blogspot.com"
 echo "甬哥YouTube频道 ：www.youtube.com/@ygkkk"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 
-echo "局域网共享代理：Socks5+Http双代理一键脚本"
-echo "版本：V25.2.15  快捷方式：bash gv.sh"
+echo "Google_VPN局域网共享代理：Socks5+Http双代理一键脚本"
+echo "快捷方式：bash gv.sh"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 
 echo " 1. 重置安装"
 echo " 2. 删除卸载"
