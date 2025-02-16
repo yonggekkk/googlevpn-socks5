@@ -2,10 +2,12 @@
 
 ### Google VPN用户推荐使用，Pixel手机先安装[Termux](https://github.com/termux/termux-app/releases)运行一键脚本
 
-一键脚本：
+#### 一键脚本：
 ```
 pkg upgrade -y && bash <(curl -Ls https://gh-proxy.com/https://raw.githubusercontent.com/yonggekkk/google_vpn_proxy/main/gv.sh)
 ```
+
+#### 查看内网IP地址命令```ifconfig```
 
 -----------------------------------------------------
 
