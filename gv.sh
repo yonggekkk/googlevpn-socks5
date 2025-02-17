@@ -62,7 +62,11 @@ echo 'screen -wipe' >> gost.sh
 echo "screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs kill" >> gost.sh
 echo "screen -dmS myscreen bash -c './gost -C config.yaml'" >> gost.sh
 chmod +x gost.sh
-echo "安装完毕" && sleep 3
+echo "安装完毕" 
+echo
+echo "快捷方式：bash gv.sh  可查看Socks5端口与Http端口"
+echo "退出脚本运行：exit"
+sleep 2
 exit
 }
 uninstall(){
@@ -79,7 +83,8 @@ echo "甬哥Blogger博客 ：ygkkk.blogspot.com"
 echo "甬哥YouTube频道 ：www.youtube.com/@ygkkk"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 
 echo "Google_VPN局域网共享代理：Socks5+Http双代理一键脚本"
-echo "快捷方式：bash gv.sh"
+echo "快捷方式：bash gv.sh  可查看Socks5端口与Http端口"
+echo "退出脚本运行：exit"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 
 echo " 1. 重置安装"
 echo " 2. 删除卸载"
