@@ -19,6 +19,7 @@ pkg upgrade -y && bash <(curl -Ls https://gh-proxy.com/https://raw.githubusercon
 2、退出Termux后，共享代理会自动保持在后台运行
 
 3、输入命令 ```exit``` 才可退出共享代理
+
 --------------------------------------------------
 ### 视频教程：
 
