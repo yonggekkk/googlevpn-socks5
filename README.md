@@ -19,6 +19,12 @@ pkg upgrade -y && bash <(curl -Ls https://gh-proxy.com/https://raw.githubusercon
 2、退出Termux后，共享代理会自动保持在后台运行
 
 3、输入命令 ```exit``` 才可退出共享代理
+--------------------------------------------------
+### 视频教程：
+
+Google pixel手机及VPN使用心得[视频教程系列](https://www.youtube.com/playlist?list=PLMgly2AulGG_wlFVKqKmr6_8RQYG5UgI6)
+
+[最新！永久免费的Google VPN教程（五）：解决前置代理引导Google VPN报错问题，一键脚本支持socks+http共享Google VPN到局域网](https://youtu.be/Wt7c-4pnLCg)
 
 -----------------------------------------------------
 
