@@ -32,6 +32,9 @@ Google pixel手机及VPN使用心得[视频教程系列](https://www.youtube.com
 ## 脚本不限于Google VPN，其他代理客户端也可享受局域网共享代理功能
 
 -----------------------------------------------------
+### 交流平台：[甬哥博客地址](https://ygkkk.blogspot.com)、[甬哥YouTube频道](https://www.youtube.com/@ygkkk)、[甬哥TG电报群组](https://t.me/+jZHc6-A-1QQ5ZGVl)、[甬哥TG电报频道](https://t.me/+DkC9ZZUgEFQzMTZl)
+
+--------------------------------------------------------
 
 ### 感谢你右上角的star🌟
 [![Stargazers over time](https://starchart.cc/yonggekkk/google_vpn_proxy.svg)](https://starchart.cc/yonggekkk/google_vpn_proxy)
